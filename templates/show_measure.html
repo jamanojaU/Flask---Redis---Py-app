@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1> {% block title %} Lista de medidas {% endblock %}</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for measure in measures %}
+            <tr>
+                <th scope="row">{{ measure }}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+{% endblock %}

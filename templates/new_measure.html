@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>{% block title %} Recepción de nuevas medidas {% endblock %}</h1>
+
+    <form action="{{ url_for('new_measure_id') }}" method="post">
+
+        <div class="form-group">
+
+            <label for="temperature">Nuevo valor</label>
+
+            <input type="text" class="form-control" id="value" name="value" placeholder="Presiona 'Enter' para enviar" required>
+
+            <input type="submit" class="form_control" value="Submit">
+
+        </div>
+
+        </form>
+
+{% endblock %}
