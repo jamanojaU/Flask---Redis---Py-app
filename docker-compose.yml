@@ -6,7 +6,7 @@ services:
     ports:
       - "6379:6379"
   web:
-    build: .
+    image: jamanoja/flask-redis-py-app
     container_name: web
     ports:
       - "5000:5000"
